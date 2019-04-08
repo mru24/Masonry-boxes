@@ -10,6 +10,7 @@ $border: 1px solid #aaa
 
 body
   font-family: sans-serif
+  background: #282c2d
   .container
     width: 80%
     margin: auto
@@ -22,7 +23,7 @@ body
       width: $size
       height: $size
       text-align: center
-      line-height: $size - 20
+      line-height: 1.5
       padding: 10px
       position: relative
       overflow: hidden
@@ -49,18 +50,25 @@ body
         @include transition
       .cover
         position: absolute
-        top: -100%
+        top: 100%
         left: 0
         width: 100%
         height: 100%
-        background: red
+        background: #de5c5c
+        color: white
+        font-weight: lighter
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 5px
         @include transition
       h1
         color: white
         text-shadow: 0 0 15px #222
+        // text-transform: uppercase
     .box:hover:before
       opacity: 1
       transition-delay: .3s
     .box:hover > .cover
-      transform: translateY(100%)
+      transform: translateY(-100%)
       transition-delay: .8s
